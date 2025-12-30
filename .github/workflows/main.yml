@@ -18,7 +18,11 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
+<<<<<<< HEAD
           password: ${{ secrets.GITHUB_TOKEN }}
+=======
+          password: ${{ secrets.GHCR_PAT }}
+>>>>>>> 83110c7 (Add GitHub Actions workflow for Docker build & push)
 
       - name: Build Docker image
         run: docker build -t ghcr.io/${{ github.repository }}/nextjs-app:latest .
